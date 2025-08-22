@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if perms.recipe.change_recipe %}
+<button><a href="{% url 'edit_dish' post.slug %}">Редактировать</a> </button>
+{% endif %}
+<h1>{{post.title}}</h1>
+{% if post.image %}
+<p><img class="img-article-left" src="{{post.image.url}}"></p>
+{% endif %}
+{{post.content}}
+{% endblock %}
