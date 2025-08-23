@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'recipe.apps.RecipeConfig',
     'users.apps.UsersConfig',
+    'social_django',
     'debug_toolbar',
 ]
 
@@ -134,10 +135,13 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 LOGIN_URL = 'users:login'
 AUTHENTICATION_BACKENDS = [
+    'social_core.backends.github.GithubOAuth2',
     'django.contrib.auth.backends.ModelBackend',
     'users.authentication.EmailAuthBackend',
 
 ]
+SOCIAL_AUTH_GITHUB_KEY = 'Ov23liCubXgm8AuzIAMi'
+SOCIAL_AUTH_GITHUB_SECRET = '8c476797cedb6d619b2b746cd4502519b271fb94'
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 EMAIL_HOST = 'smtp.yandex.ru'

@@ -24,6 +24,7 @@ from siterecipes import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("social-auth", include('social_django.urls', namespace="social")),
     path('', include('recipe.urls')),
     path('users/', include('users.urls', namespace='users')),
     path('__debug__', include('debug_toolbar.urls')),
