@@ -141,7 +141,7 @@ AUTHENTICATION_BACKENDS = [
 
 ]
 SOCIAL_AUTH_GITHUB_KEY = 'Ov23liCubXgm8AuzIAMi'
-
+SOCIAL_AUTH_GITHUB_SECRET = '*****************************************'
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 EMAIL_HOST = 'smtp.yandex.ru'
